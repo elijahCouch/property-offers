@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './offer.css';
 
 const App = () => {
-    const [searchValue, setSearchValue] = useState('');
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [errorMessage, setErrorMessage] = useState(null);
     const [showError, setShowError] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();

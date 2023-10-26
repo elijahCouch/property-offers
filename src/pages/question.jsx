@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './question.css';
 import man1Image from '../images/man1.jpeg';
@@ -6,11 +5,6 @@ import man2Image from '../images/man2.jpeg';
 import womenImage from '../images/woman.jpeg';
 
 const App = () => {
-    const [selectedOption, setSelectedOption] = useState("none");
-
-    const handleOptionChange = (e) => {
-        setSelectedOption(e.target.value);
-    };
 
     const profileData = [
         { text: "Developer", image: man1Image },

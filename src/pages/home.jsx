@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './App.css';
 
 const App = () => {
-    const [searchValue, setSearchValue] = useState('');
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -17,9 +16,6 @@ const App = () => {
         };
     }, []);
 
-    const handleSearch = () => {
-        alert(`Searching for: ${searchValue}`);
-    };
 
     return (
         <div className="app-container">
@@ -48,7 +44,6 @@ const App = () => {
                     placeholder="Enter your address here"
                     className="search-bar"
                     spellCheck="false"
-                    onChange={(e) => setSearchValue(e.target.value)}
                     style={{ width: windowWidth <= 768 ? '100%' : 'auto' }}
                 />
                 <Link to="/get-offer" className="button">
